@@ -16,8 +16,8 @@ public class LocationDTO {
         this.lat = lat;
         this.lng = lng;
     }
-    public String getCSV(){
-      return direction+";"+lat+";"+lng;
+    public String getCSV(String delimiter){
+      return direction+delimiter+lat+delimiter+lng;
     };
 
     @Override

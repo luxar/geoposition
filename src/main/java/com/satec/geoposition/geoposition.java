@@ -59,7 +59,7 @@ public  class geoposition {
 
                 return out;
 
-            } catch (IOException e) {
+            } catch (Exception e) {
                 slf4jLogger.error(e.toString());
             }
 
@@ -107,12 +107,16 @@ return getPosition(input).get(0);
         slf4jLogger.info(Arrays.toString(output.toArray()));
         slf4jLogger.info(getPosition("fernandez ladreda oviedo").toString());
 
+
+
+        slf4jLogger.info(toCSV(output));
+
+    }
+    public static String toCSV( List<LocationDTO> directions) {
         StringBuffer text=new StringBuffer("");
 
-        output.forEach(locationDTO -> text.append(locationDTO.getCSV()).append("\n"));
-
-        slf4jLogger.info(text.toString());
-
+         directions.forEach(locationDTO -> text.append(locationDTO.getCSV(";")).append("\n"));
+        return text.toString();
     }
 
 
