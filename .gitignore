@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.xml
+target/classes/com/satec/geoposition/DTO/LocationDTO.class
+target/classes/com/satec/geoposition/geoposition.class
+*.class
